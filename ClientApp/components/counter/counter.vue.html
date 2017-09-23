@@ -1,0 +1,19 @@
+
+<template>
+    <v-layout>
+        <v-flex xs12 sm6>
+            <v-dialog persistent lazy full-width>
+                <v-text-field slot="activator" label="Picker in dialog" dark prepend-icon="event" readonly></v-text-field>
+                <v-date-picker scrollable >
+                    <template scope="{ save, cancel }">
+                        <v-card-actions>
+                            <v-btn flat primary @click.native="cancel()">Cancel</v-btn>
+                            <v-btn flat primary @click.native="save()">Save</v-btn>
+                        </v-card-actions>
+                    </template>
+                </v-date-picker>
+            </v-dialog>
+        </v-flex>
+    </v-layout>
+</template>
+<script src="./counter.ts"></script>
